@@ -172,12 +172,10 @@ ENDSEC
 SECTION
   2
 ENTITIES
-
   0
 COMMENT
   1
 === BRACKET PART — FRONT VIEW ===
-
   0
 LINE
   8
@@ -194,7 +192,6 @@ OUTLINE
 20.0
  31
 0.0
-
   0
 LINE
   8
@@ -211,7 +208,6 @@ OUTLINE
 80.0
  31
 0.0
-
   0
 LINE
   8
@@ -228,7 +224,6 @@ OUTLINE
 80.0
  31
 0.0
-
   0
 LINE
   8
@@ -245,7 +240,6 @@ OUTLINE
 20.0
  31
 0.0
-
   0
 CIRCLE
   8
@@ -258,7 +252,6 @@ OUTLINE
 0.0
  40
 7.5
-
   0
 CIRCLE
   8
@@ -271,7 +264,6 @@ OUTLINE
 0.0
  40
 7.5
-
   0
 CIRCLE
   8
@@ -284,7 +276,6 @@ OUTLINE
 0.0
  40
 7.5
-
   0
 CIRCLE
   8
@@ -297,7 +288,6 @@ OUTLINE
 0.0
  40
 7.5
-
   0
 CIRCLE
   8
@@ -310,7 +300,6 @@ HIDDEN
 0.0
  40
 4.0
-
   0
 CIRCLE
   8
@@ -323,7 +312,6 @@ HIDDEN
 0.0
  40
 4.0
-
   0
 CIRCLE
   8
@@ -336,7 +324,6 @@ HIDDEN
 0.0
  40
 4.0
-
   0
 CIRCLE
   8
@@ -349,7 +336,6 @@ HIDDEN
 0.0
  40
 4.0
-
   0
 LINE
   8
@@ -366,7 +352,6 @@ CENTERLINE
 85.0
  31
 0.0
-
   0
 LINE
   8
@@ -383,7 +368,6 @@ CENTERLINE
 85.0
  31
 0.0
-
   0
 LINE
   8
@@ -400,7 +384,6 @@ CENTERLINE
 35.0
  31
 0.0
-
   0
 LINE
   8
@@ -417,12 +400,10 @@ CENTERLINE
 65.0
  31
 0.0
-
   0
 COMMENT
   1
 === HORIZONTAL DIMENSION — WIDTH 100mm ===
-
   0
 LINE
   8
@@ -439,7 +420,6 @@ DIMENSION
 10.0
  31
 0.0
-
   0
 LINE
   8
@@ -456,7 +436,6 @@ DIMENSION
 22.0
  31
 0.0
-
   0
 LINE
   8
@@ -473,7 +452,6 @@ DIMENSION
 22.0
  31
 0.0
-
   0
 TEXT
   8
@@ -490,12 +468,10 @@ DIMENSION
 100
  72
 1
-
   0
 COMMENT
   1
 === VERTICAL DIMENSION — HEIGHT 60mm ===
-
   0
 LINE
   8
@@ -512,7 +488,6 @@ DIMENSION
 80.0
  31
 0.0
-
   0
 LINE
   8
@@ -529,7 +504,6 @@ DIMENSION
 20.0
  31
 0.0
-
   0
 LINE
   8
@@ -546,7 +520,6 @@ DIMENSION
 80.0
  31
 0.0
-
   0
 TEXT
   8
@@ -563,12 +536,10 @@ DIMENSION
 60
  72
 1
-
   0
 COMMENT
   1
 === HOLE SPACING DIMENSIONS ===
-
   0
 LINE
   8
@@ -585,7 +556,6 @@ DIMENSION
 90.0
  31
 0.0
-
   0
 LINE
   8
@@ -602,7 +572,6 @@ DIMENSION
 92.0
  31
 0.0
-
   0
 LINE
   8
@@ -619,7 +588,6 @@ DIMENSION
 92.0
  31
 0.0
-
   0
 TEXT
   8
@@ -636,12 +604,128 @@ DIMENSION
 60
  72
 1
-
+  0
+COMMENT
+  1
+=== VERTICAL HOLE SPACING — 30mm ===
+  0
+LINE
+  8
+DIMENSION
+ 10
+140.0
+ 20
+35.0
+ 30
+0.0
+ 11
+140.0
+ 21
+65.0
+ 31
+0.0
+  0
+LINE
+  8
+DIMENSION
+ 10
+138.0
+ 20
+35.0
+ 30
+0.0
+ 11
+142.0
+ 21
+35.0
+ 31
+0.0
+  0
+LINE
+  8
+DIMENSION
+ 10
+138.0
+ 20
+65.0
+ 30
+0.0
+ 11
+142.0
+ 21
+65.0
+ 31
+0.0
+  0
+TEXT
+  8
+DIMENSION
+ 10
+143.0
+ 20
+50.0
+ 30
+0.0
+ 40
+3.0
+  1
+30
+ 72
+1
+  0
+COMMENT
+  1
+=== HOLE DIAMETER CALLOUT ===
+  0
+TEXT
+  8
+ANNOTATION
+ 10
+48.0
+ 20
+35.0
+ 30
+0.0
+ 40
+2.5
+  1
+4x %%C15 THRU
+  0
+TEXT
+  8
+ANNOTATION
+ 10
+48.0
+ 20
+32.0
+ 30
+0.0
+ 40
+2.5
+  1
+%%C8 CBORE x 3 DEEP
+  0
+COMMENT
+  1
+=== SURFACE FINISH SYMBOL ===
+  0
+TEXT
+  8
+ANNOTATION
+ 10
+75.0
+ 20
+75.0
+ 30
+0.0
+ 40
+2.5
+  1
+Ra 3.2
   0
 COMMENT
   1
 === TITLE BLOCK ===
-
   0
 LINE
   8
@@ -658,7 +742,6 @@ TITLEBLOCK
 0.0
  31
 0.0
-
   0
 LINE
   8
@@ -675,7 +758,6 @@ TITLEBLOCK
 160.0
  31
 0.0
-
   0
 LINE
   8
@@ -692,7 +774,6 @@ TITLEBLOCK
 160.0
  31
 0.0
-
   0
 LINE
   8
@@ -709,7 +790,6 @@ TITLEBLOCK
 0.0
  31
 0.0
-
   0
 LINE
   8
@@ -726,7 +806,6 @@ TITLEBLOCK
 30.0
  31
 0.0
-
   0
 LINE
   8
@@ -743,7 +822,6 @@ TITLEBLOCK
 30.0
  31
 0.0
-
   0
 LINE
   8
@@ -760,7 +838,6 @@ TITLEBLOCK
 15.0
  31
 0.0
-
   0
 LINE
   8
@@ -777,7 +854,6 @@ TITLEBLOCK
 30.0
  31
 0.0
-
   0
 TEXT
   8
@@ -806,7 +882,6 @@ ANNOTATION
 4.5
   1
 MOUNTING BRACKET
-
   0
 TEXT
   8
@@ -835,7 +910,6 @@ ANNOTATION
 4.5
   1
 MB-001
-
   0
 TEXT
   8
@@ -864,7 +938,6 @@ ANNOTATION
 4.5
   1
 1:1
-
   0
 TEXT
   8
@@ -893,7 +966,6 @@ ANNOTATION
 4.5
   1
 Al 6061-T6
-
   0
 TEXT
   8
@@ -921,8 +993,7 @@ ANNOTATION
  40
 3.5
   1
-LINEAR: +/- 0.1 mm
-
+LINEAR: +/- 0.1 mm (ISO 2768-m)
   0
 TEXT
   8
@@ -937,7 +1008,6 @@ ANNOTATION
 3.5
   1
 ANGULAR: +/- 0.5 deg
-
   0
 TEXT
   8
@@ -951,8 +1021,49 @@ ANNOTATION
  40
 3.5
   1
-HOLES: +0.05 / 0.00 mm
-
+HOLES: H7 (+0.015 / 0.000 mm)
+  0
+TEXT
+  8
+ANNOTATION
+ 10
+5.0
+ 20
+88.0
+ 30
+0.0
+ 40
+3.5
+  1
+SURFACE FINISH: Ra 3.2 UNLESS NOTED
+  0
+TEXT
+  8
+ANNOTATION
+ 10
+5.0
+ 20
+83.0
+ 30
+0.0
+ 40
+3.5
+  1
+DEBURR ALL SHARP EDGES 0.3 MAX
+  0
+TEXT
+  8
+ANNOTATION
+ 10
+5.0
+ 20
+155.0
+ 30
+0.0
+ 40
+3.0
+  1
+THIRD ANGLE PROJECTION
   0
 ENDSEC
   0

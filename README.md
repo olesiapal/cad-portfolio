@@ -1,112 +1,106 @@
 # CAD Portfolio
 
-> A collection of parametric CAD projects demonstrating proficiency in
-> script-based 3D modelling, 2D technical drafting, and engineering design.
+> Script-based parametric CAD — involute gears, snap-fit enclosures, structural brackets, and engineering drawings. Every model is code-driven: change a parameter, get a new part.
 
 ---
 
 ## Projects
 
-### 01 · Parametric Involute Spur Gear — OpenSCAD
+### 01 · [Parametric Involute Spur Gear](01_parametric_gear/) — OpenSCAD
 
-**File:** [`01_parametric_gear/parametric_gear.scad`](01_parametric_gear/parametric_gear.scad)
-
-A fully parametric spur gear with a true involute tooth profile, hub, keyway, and root fillets.
-All geometry is driven by a small set of parameters at the top of the file —
-change `num_teeth`, `module_size`, or `pressure_angle` and the entire model rebuilds instantly.
-
-- True involute geometry (not polygon approximation)
-- Metric module system
-- Raised hub with keyway slot
-- Preview mode for meshing pair
+True involute tooth profile with backlash compensation, weight-reduction spokes, keyway, chamfers, and herringbone mode. All geometry derived from metric module and tooth count.
 
 ```
-module_size = 2 | num_teeth = 24 | pressure_angle = 20° | height = 10 mm
+module = 2 · 24 teeth · 20° pressure angle · spoke pockets · optional herringbone
 ```
+
+**Key features:** involute math from base circle · configurable backlash · spoke weight reduction · tip/bore chamfers · mating gear preview · CLI parameter overrides
 
 ---
 
-### 02 · Snap-Fit Electronics Enclosure — OpenSCAD
+### 02 · [Snap-Fit Electronics Enclosure](02_enclosure_box/) — OpenSCAD
 
-**File:** [`02_enclosure_box/enclosure.scad`](02_enclosure_box/enclosure.scad)
-
-A two-part snap-fit enclosure designed for custom PCBs.
-Base and lid are generated from a single set of parameters —
-change inner dimensions and all features (standoffs, lip, cutouts) adapt automatically.
-
-- Four M2.5 PCB standoffs with counterbored screw holes
-- Snap-fit lip with configurable interference
-- Rear cable gland cutouts (count and diameter parametric)
-- Exploded view mode for documentation renders
+Two-part snap-fit enclosure for custom PCBs. Base and lid generated from a single dimension set — standoffs, ventilation, cable glands, mounting ears, and label recess all adapt automatically.
 
 ```
-inner: 80 × 60 × 30 mm | wall: 2.5 mm | snap lip: 1.2 mm interference
+80 × 60 × 30 mm cavity · 2.5 mm wall · M2.5 heat-set standoffs · keyhole mount ears
 ```
+
+**Key features:** snap-fit lip with interference control · ventilation slot array · rear cable glands · wall-mount ears with keyhole · lid label recess · cross-section preview mode
 
 ---
 
-### 03 · Mounting Bracket — Technical Drawing (DXF)
+### 03 · [Mounting Bracket — Technical Drawing](03_technical_drawing/) — DXF
 
-**File:** [`03_technical_drawing/mounting_bracket.dxf`](03_technical_drawing/mounting_bracket.dxf)
+Dimensioned engineering drawing in DXF R2000 format with proper layer structure, tolerance callouts per ISO 2768-m, hole fit designations (H7), surface finish symbols, and a complete title block.
 
-A dimensioned front-view technical drawing of an aluminium mounting bracket,
-produced in standard DXF R2000 format. Compatible with AutoCAD, LibreCAD, QCAD, and FreeCAD.
+```
+100 × 60 mm · 4× Ø15 / Ø8 cbore · Al 6061-T6 · ISO 2768-m tolerances
+```
 
-- Proper layer structure: OUTLINE / HIDDEN / CENTERLINE / DIMENSION / TITLEBLOCK
-- Four M8 clearance holes on 60 mm pattern
-- Full dimensioning with tolerance callouts
-- Title block: part number MB-001, material Al 6061-T6, scale 1:1
+**Key features:** 6-layer structure (OUTLINE / HIDDEN / CENTERLINE / DIMENSION / TITLEBLOCK / ANNOTATION) · H7 hole tolerances · Ra 3.2 surface finish · deburr note · third-angle projection
 
 ---
 
-### 04 · L-Bracket with Gusset — CadQuery (Python)
+### 04 · [L-Bracket with Gusset](04_cadquery_bracket/) — CadQuery (Python)
 
-**File:** [`04_cadquery_bracket/bracket.py`](04_cadquery_bracket/bracket.py)
-
-A structural L-bracket generated entirely in Python using the CadQuery library.
-Exports production-ready `.step` and `.stl` files programmatically.
-
-- Triangular gusset rib for torsional rigidity
-- Counterbored mounting holes on both flanges
-- Full edge filleting
-- STEP export for downstream CAD import
-
-```bash
-pip install cadquery
-python bracket.py
-# → bracket.step + bracket.stl
-```
+Structural bracket generated programmatically with CadQuery. Exports STEP + STL + DXF. Includes mass estimation, CLI argument parsing, and a clean dataclass-based configuration system.
 
 ```
-flange: 80 × 80 mm | leg: 80 × 60 mm | thickness: 6 mm | holes: Ø8.5 / CB Ø14
+80 × 80 mm flange · 60 mm leg · 6 mm thick · M8 cbore + M6 through · Al 6061-T6 at 131 g
 ```
+
+**Key features:** triangular gusset ribs · counterbored + through holes · lightening cutout · material mass calc · multi-format export · CLI overrides · library-importable API
 
 ---
 
 ## Tools & Formats
 
-| Project | Tool | Output Format |
-|---|---|---|
-| Spur Gear | OpenSCAD | `.scad` → `.stl` / `.dxf` |
-| Enclosure | OpenSCAD | `.scad` → `.stl` |
-| Technical Drawing | DXF / LibreCAD | `.dxf` |
-| L-Bracket | CadQuery (Python) | `.step` / `.stl` |
+| Project | Tool | Input | Output |
+|---|---|---|---|
+| Spur Gear | OpenSCAD ≥ 2021.01 | `.scad` | `.stl` · `.dxf` · `.amf` |
+| Enclosure | OpenSCAD ≥ 2021.01 | `.scad` | `.stl` |
+| Technical Drawing | Any DXF viewer | `.dxf` | — |
+| L-Bracket | CadQuery 2.x / Python 3.9+ | `.py` | `.step` · `.stl` · `.dxf` |
 
 ## Running the Projects
 
-**OpenSCAD** (projects 01 & 02)
-```
-Download: https://openscad.org/downloads.html
-Open .scad file → F5 preview → F6 render → Export
+### OpenSCAD (Projects 01 & 02)
+
+```bash
+# Install: https://openscad.org/downloads.html
+openscad 01_parametric_gear/parametric_gear.scad   # F5 preview · F6 render
+
+# CLI batch export with parameter overrides
+openscad -o gear_m3_z36.stl -D 'module_size=3' -D 'num_teeth=36' \
+  01_parametric_gear/parametric_gear.scad
 ```
 
-**CadQuery** (project 04)
+### CadQuery (Project 04)
+
 ```bash
 pip install cadquery
-python bracket.py
+python 04_cadquery_bracket/bracket.py
+# → bracket.step + bracket.stl + bracket_profile.dxf
+
+python 04_cadquery_bracket/bracket.py --flange-w 120 --thickness 8
 ```
 
-**DXF** (project 03)
+### DXF Viewer (Project 03)
+
 ```
-Open with: LibreCAD, QCAD, AutoCAD, FreeCAD, or any DXF-compatible viewer
+LibreCAD (free)  ·  QCAD  ·  AutoCAD  ·  FreeCAD  ·  DraftSight
 ```
+
+## Design Philosophy
+
+Every project in this portfolio follows the same principles:
+
+1. **Parametric first** — geometry is driven by variables, not manual dimensions
+2. **Code as CAD** — reproducible, version-controlled, reviewable
+3. **Production-aware** — tolerances, material specs, and manufacturing notes included
+4. **Standards-based** — ISO/DIN conventions for modules, fits, and tolerancing
+
+## License
+
+MIT — see [LICENSE](LICENSE)
