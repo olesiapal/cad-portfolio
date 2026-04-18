@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta
+    name="description"
+    content="Mechanical design portfolio focused on parametric CAD, automation, fabrication-aware geometry, and standards-conscious documentation."
+  >
+  <title>VB CAD Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="page-shell">
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="VB CAD Portfolio home">
+        <span class="brand-mark">VB</span>
+        <span class="brand-copy">CAD Portfolio</span>
+      </a>
+      <nav class="site-nav" aria-label="Primary">
+        <a href="#projects">Projects</a>
+        <a href="#process">Process</a>
+        <a href="#capabilities">Capabilities</a>
+        <a href="#repository">Repository</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero reveal">
+        <div class="hero-copy">
+          <p class="eyebrow">Mechanical Design Portfolio</p>
+          <h1>Parametric CAD work built for fabrication, iteration, and clean handoff.</h1>
+          <p class="lead">
+            This portfolio focuses on code-driven mechanical design: reproducible geometry,
+            manufacturing-aware decisions, and outputs that move cleanly from concept to
+            export, review, and downstream use.
+          </p>
+
+          <div class="hero-actions">
+            <a class="button button-primary" href="#projects">View selected work</a>
+            <a class="button button-secondary" href="README.md">Open repository brief</a>
+          </div>
+
+          <ul class="hero-metrics" aria-label="Portfolio metrics">
+            <li>
+              <strong>4</strong>
+              <span>featured builds</span>
+            </li>
+            <li>
+              <strong>3</strong>
+              <span>generation workflows</span>
+            </li>
+            <li>
+              <strong>STEP · STL · DXF</strong>
+              <span>handoff formats</span>
+            </li>
+            <li>
+              <strong>ISO-aware</strong>
+              <span>drawing discipline</span>
+            </li>
+          </ul>
+        </div>
+
+        <aside class="hero-panel" aria-label="Engineering summary">
+          <div class="panel-grid"></div>
+          <div class="panel-head">
+            <p class="panel-label">Selected stack</p>
+            <h2>Code-first CAD</h2>
+          </div>
+
+          <div class="signal-row">
+            <span>OpenSCAD</span>
+            <span>CadQuery</span>
+            <span>DXF</span>
+          </div>
+
+          <div class="panel-cards">
+            <article class="mini-card">
+              <p class="mini-title">What stands out</p>
+              <p>Parametric gears, enclosure logic, structural brackets, and standards-based drawings.</p>
+            </article>
+            <article class="mini-card">
+              <p class="mini-title">Engineering signal</p>
+              <p>Backlash, cutout planning, handoff drawings, slot/round fixing, and load-screening output.</p>
+            </article>
+          </div>
+
+          <div class="code-window" aria-label="Representative snippet">
+            <pre><code>module_size = 2
+num_teeth   = 24
+backlash    = 0.1
+
+cfg = BracketConfig(
+    flange_w=100,
+    thickness=6,
+    base_hole_type="slot",
+)</code></pre>
+          </div>
+        </aside>
+      </section>
+
+      <section class="proof-strip reveal" aria-label="Core strengths">
+        <p>Parametric modeling</p>
+        <p>Manufacturing-aware geometry</p>
+        <p>Technical documentation</p>
+        <p>Reusable automation</p>
+        <p>Version-controlled design</p>
+      </section>
+
+      <section class="section-heading reveal" id="projects">
+        <div>
+          <p class="eyebrow">Selected Work</p>
+          <h2>Projects that read like engineering case studies.</h2>
+        </div>
+        <div class="filters" aria-label="Project filters">
+          <button class="filter-button" type="button" data-filter="all" aria-pressed="true">All</button>
+          <button class="filter-button" type="button" data-filter="openscad" aria-pressed="false">OpenSCAD</button>
+          <button class="filter-button" type="button" data-filter="cadquery" aria-pressed="false">CadQuery</button>
+          <button class="filter-button" type="button" data-filter="drawing" aria-pressed="false">Drawing</button>
+        </div>
+      </section>
+
+      <section class="project-grid">
+        <article class="project-card reveal" data-category="openscad">
+          <div class="project-topline">
+            <span>01 / OpenSCAD</span>
+            <span>Power Transmission</span>
+          </div>
+          <div class="project-visual" aria-hidden="true">
+            <img src="assets/previews/transmission-generator-cover.png" alt="Parametric Transmission Generator preview">
+          </div>
+          <div class="project-body">
+            <h3>Parametric Transmission Generator</h3>
+            <p>
+              A gear and gear-pair generator with involute tooth geometry, transmission
+              metrics, warning output, and independent mate-gear parameters.
+            </p>
+            <dl class="fact-list">
+              <div>
+                <dt>Constraint</dt>
+                <dd>Explore transmission changes without remodeling every ratio variant.</dd>
+              </div>
+              <div>
+                <dt>Signal</dt>
+                <dd>Real involute math, pair metrics, warning logic, herringbone-ready interface.</dd>
+              </div>
+              <div>
+                <dt>Outputs</dt>
+                <dd>OpenSCAD source with STL, DXF, and AMF export paths.</dd>
+              </div>
+            </dl>
+          </div>
+          <div class="tag-row" aria-label="Tags">
+            <span>Involute math</span>
+            <span>Gear pairs</span>
+            <span>Backlash</span>
+          </div>
+          <div class="card-actions">
+            <a href="01_parametric_gear/README.md">Case notes</a>
+            <a href="01_parametric_gear/parametric_gear.scad">Source</a>
+          </div>
+        </article>
+
+        <article class="project-card reveal" data-category="openscad">
+          <div class="project-topline">
+            <span>02 / OpenSCAD</span>
+            <span>Electronics Housing</span>
+          </div>
+          <div class="project-visual" aria-hidden="true">
+            <img src="assets/previews/pcb-enclosure-cover.png" alt="PCB-Driven Enclosure Generator preview">
+          </div>
+          <div class="project-body">
+            <h3>PCB-Driven Enclosure Generator</h3>
+            <p>
+              A product-style enclosure driven by PCB anchors, closure mode, wall cutout
+              arrays, and an optional gasket groove.
+            </p>
+            <dl class="fact-list">
+              <div>
+                <dt>Constraint</dt>
+                <dd>Package electronics around board mounts and I/O, not just outer dimensions.</dd>
+              </div>
+              <div>
+                <dt>Signal</dt>
+                <dd>PCB hole pattern, screw/snap closure, cutout arrays, sealing-aware details.</dd>
+              </div>
+              <div>
+                <dt>Outputs</dt>
+                <dd>Print-ready OpenSCAD geometry with documentation-oriented views.</dd>
+              </div>
+            </dl>
+          </div>
+          <div class="tag-row" aria-label="Tags">
+            <span>PCB mounts</span>
+            <span>DFM</span>
+            <span>I/O cutouts</span>
+          </div>
+          <div class="card-actions">
+            <a href="02_enclosure_box/README.md">Case notes</a>
+            <a href="02_enclosure_box/enclosure.scad">Source</a>
+          </div>
+        </article>
+
+        <article class="project-card reveal" data-category="drawing">
+          <div class="project-topline">
+            <span>03 / DXF</span>
+            <span>Documentation</span>
+          </div>
+          <div class="project-visual" aria-hidden="true">
+            <img src="assets/previews/bracket-handoff-cover.png" alt="Bracket Manufacturing Handoff preview">
+          </div>
+          <div class="project-body">
+            <h3>Bracket Manufacturing Handoff Drawing</h3>
+            <p>
+              A bracket-linked DXF sheet that acts as the manufacturing handoff layer for
+              the CadQuery structural bracket family.
+            </p>
+            <dl class="fact-list">
+              <div>
+                <dt>Constraint</dt>
+                <dd>Carry the bracket project through to a reviewable fabrication deliverable.</dd>
+              </div>
+              <div>
+                <dt>Signal</dt>
+                <dd>Orthographic views, hole callouts, title-block data, linked handoff intent.</dd>
+              </div>
+              <div>
+                <dt>Outputs</dt>
+                <dd>DXF R2000 drawing compatible with standard CAD viewers.</dd>
+              </div>
+            </dl>
+          </div>
+          <div class="tag-row" aria-label="Tags">
+            <span>DXF</span>
+            <span>Orthographic views</span>
+            <span>Title blocks</span>
+          </div>
+          <div class="card-actions">
+            <a href="03_technical_drawing/README.md">Case notes</a>
+            <a href="03_technical_drawing/mounting_bracket.dxf">Drawing file</a>
+          </div>
+        </article>
+
+        <article class="project-card reveal" data-category="cadquery">
+          <div class="project-topline">
+            <span>04 / CadQuery</span>
+            <span>Structural Part</span>
+          </div>
+          <div class="project-visual" aria-hidden="true">
+            <img src="assets/previews/structural-bracket-cover.png" alt="Structural Bracket Family preview">
+          </div>
+          <div class="project-body">
+            <h3>Structural Bracket Family</h3>
+            <p>
+              A CadQuery bracket family with real bend geometry, round/slot mounting
+              options, load-screening output, and multi-format export.
+            </p>
+            <dl class="fact-list">
+              <div>
+                <dt>Constraint</dt>
+                <dd>Generate a reusable structural part family instead of a single bracket model.</dd>
+              </div>
+              <div>
+                <dt>Signal</dt>
+                <dd>Inner bend radius, slot/round holes, cutout radiusing, lightweight load estimate.</dd>
+              </div>
+              <div>
+                <dt>Outputs</dt>
+                <dd>STEP, STL, and DXF generated from the same source of truth.</dd>
+              </div>
+            </dl>
+          </div>
+          <div class="tag-row" aria-label="Tags">
+            <span>Slot holes</span>
+            <span>CadQuery</span>
+            <span>Load check</span>
+          </div>
+          <div class="card-actions">
+            <a href="04_cadquery_bracket/README.md">Case notes</a>
+            <a href="04_cadquery_bracket/bracket.py">Source</a>
+          </div>
+        </article>
+      </section>
+
+      <section class="section-heading reveal" id="process">
+        <div>
+          <p class="eyebrow">Process</p>
+          <h2>A workflow that reads well in review and holds up in production handoff.</h2>
+        </div>
+      </section>
+
+      <section class="process-grid">
+        <article class="process-card reveal">
+          <span>01</span>
+          <h3>Define the constraint</h3>
+          <p>Start from fit, loading, mounting, printability, or documentation requirements instead of styling first.</p>
+        </article>
+        <article class="process-card reveal">
+          <span>02</span>
+          <h3>Encode the geometry</h3>
+          <p>Turn dimensions into parameters so variants are created by changing input values, not by remodeling.</p>
+        </article>
+        <article class="process-card reveal">
+          <span>03</span>
+          <h3>Check the handoff</h3>
+          <p>Export the right formats, preserve naming clarity, and include notes or tolerances where they matter.</p>
+        </article>
+        <article class="process-card reveal">
+          <span>04</span>
+          <h3>Keep it reviewable</h3>
+          <p>Use script-based CAD so changes are version-controlled, inspectable, and easier to discuss in a team setting.</p>
+        </article>
+      </section>
+
+      <section class="section-heading reveal" id="capabilities">
+        <div>
+          <p class="eyebrow">Capabilities</p>
+          <h2>The portfolio is stronger when it signals judgment, not only tool familiarity.</h2>
+        </div>
+      </section>
+
+      <section class="capability-grid">
+        <article class="capability-card reveal">
+          <p class="card-kicker">Technical depth</p>
+          <ul class="capability-list">
+            <li>Parametric modeling with OpenSCAD and CadQuery</li>
+            <li>Mechanical features such as backlash, keyways, counterbores, and snap fits</li>
+            <li>Fabrication-aware decisions for printing, machining, and technical drawing output</li>
+            <li>Reusable configuration systems instead of single-purpose geometry</li>
+          </ul>
+        </article>
+        <article class="capability-card reveal">
+          <p class="card-kicker">Professional signal</p>
+          <ul class="capability-list">
+            <li>Clear repository structure and readable project boundaries</li>
+            <li>Outputs that match actual downstream workflows: STEP, STL, DXF</li>
+            <li>Standards language where it adds credibility rather than noise</li>
+            <li>Presentation layered as landing page plus repository brief plus project notes</li>
+          </ul>
+        </article>
+      </section>
+
+      <section class="repository reveal" id="repository">
+        <div class="repository-copy">
+          <p class="eyebrow">Repository</p>
+          <h2>Structured like a portfolio, not a dump of files.</h2>
+          <p>
+            The root of the repository now gives three entry points: a landing page for fast
+            first impressions, a stronger repository brief, and project-level notes for deeper review.
+          </p>
+        </div>
+        <div class="repository-panel">
+          <pre><code>.
+├── index.html
+├── styles.css
+├── main.js
+├── README.md
+├── 01_parametric_gear/
+├── 02_enclosure_box/
+├── 03_technical_drawing/
+└── 04_cadquery_bracket/</code></pre>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>Designed as a compact engineering portfolio surface for local preview, GitHub presentation, and future expansion.</p>
+      <p>&copy; <span id="year"></span> VB CAD Portfolio</p>
+    </footer>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
