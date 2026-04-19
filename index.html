@@ -124,80 +124,81 @@ cfg = BracketConfig(
         <article class="project-card reveal" data-category="openscad">
           <div class="project-topline">
             <span>01 / OpenSCAD</span>
-            <span>Power Transmission</span>
+            <span>Wireless Power</span>
           </div>
           <div class="project-visual" aria-hidden="true">
-            <img src="assets/previews/transmission-generator-cover.png" alt="Parametric Transmission Generator preview">
+            <img src="assets/previews/wireless-charger-cover.png" alt="Parametric Wireless Resonant Charger preview">
           </div>
           <div class="project-body">
-            <h3>Parametric Transmission Generator</h3>
+            <h3>Parametric Wireless Resonant Charger</h3>
             <p>
-              A gear and gear-pair generator with involute tooth geometry, transmission
-              metrics, warning output, and independent mate-gear parameters.
+              A mains-powered WPT transmitter prototype using magnetic resonance coupling.
+              Charges devices within ~1 m radius — no contact required.
             </p>
             <dl class="fact-list">
               <div>
                 <dt>Constraint</dt>
-                <dd>Explore transmission changes without remodeling every ratio variant.</dd>
+                <dd>Model a resonant charger that exposes real coil, thermal, and resonance decisions — not just outer shape.</dd>
               </div>
               <div>
                 <dt>Signal</dt>
-                <dd>Real involute math, pair metrics, warning logic, herringbone-ready interface.</dd>
+                <dd>Wheeler inductance estimate, resonant frequency output, Litz spiral coil, ferrite shield, LED ring, IEC inlet.</dd>
               </div>
               <div>
                 <dt>Outputs</dt>
-                <dd>OpenSCAD source with STL, DXF, and AMF export paths.</dd>
+                <dd>OpenSCAD source with assembled, exploded, coil-only, and field-preview render modes.</dd>
               </div>
             </dl>
           </div>
           <div class="tag-row" aria-label="Tags">
-            <span>Involute math</span>
-            <span>Gear pairs</span>
-            <span>Backlash</span>
+            <span>Magnetic resonance</span>
+            <span>Spiral coil</span>
+            <span>WPT</span>
           </div>
           <div class="card-actions">
-            <a href="01_parametric_gear/README.md">Case notes</a>
-            <a href="01_parametric_gear/parametric_gear.scad">Source</a>
+            <a href="01_wireless_charger/README.md">Case notes</a>
+            <a href="01_wireless_charger/wireless_charger.scad">Source</a>
           </div>
         </article>
 
         <article class="project-card reveal" data-category="openscad">
           <div class="project-topline">
             <span>02 / OpenSCAD</span>
-            <span>Electronics Housing</span>
+            <span>Magnetic Levitation</span>
           </div>
           <div class="project-visual" aria-hidden="true">
-            <img src="assets/previews/pcb-enclosure-cover.png" alt="PCB-Driven Enclosure Generator preview">
+            <img src="assets/previews/maglev-motor-cover.png" alt="Parametric Magnetic Levitation Motor preview">
           </div>
           <div class="project-body">
-            <h3>PCB-Driven Enclosure Generator</h3>
+            <h3>Parametric Magnetic Levitation Motor</h3>
             <p>
-              A product-style enclosure driven by PCB anchors, closure mode, wall cutout
-              arrays, and an optional gasket groove.
+              An axial-flux BLDC motor where the rotor levitates on opposing permanent-magnet
+              rings — zero mechanical bearing friction. A Halbach array doubles stator-side
+              flux without adding magnets.
             </p>
             <dl class="fact-list">
               <div>
                 <dt>Constraint</dt>
-                <dd>Package electronics around board mounts and I/O, not just outer dimensions.</dd>
+                <dd>Eliminate bearing friction as the dominant loss mechanism while keeping all geometry parametric.</dd>
               </div>
               <div>
                 <dt>Signal</dt>
-                <dd>PCB hole pattern, screw/snap closure, cutout arrays, sealing-aware details.</dd>
+                <dd>Halbach array, dual levitation ring pairs, 3-phase coil layout, flux-return plate, transparent shroud.</dd>
               </div>
               <div>
                 <dt>Outputs</dt>
-                <dd>Print-ready OpenSCAD geometry with documentation-oriented views.</dd>
+                <dd>OpenSCAD source with assembled, exploded, rotor-only, stator-only, and cross-section modes.</dd>
               </div>
             </dl>
           </div>
           <div class="tag-row" aria-label="Tags">
-            <span>PCB mounts</span>
-            <span>DFM</span>
-            <span>I/O cutouts</span>
+            <span>Halbach array</span>
+            <span>Maglev bearing</span>
+            <span>Axial flux</span>
           </div>
           <div class="card-actions">
-            <a href="02_enclosure_box/README.md">Case notes</a>
-            <a href="02_enclosure_box/enclosure.scad">Source</a>
+            <a href="02_maglev_motor/README.md">Case notes</a>
+            <a href="02_maglev_motor/maglev_motor.scad">Source</a>
           </div>
         </article>
 
@@ -355,8 +356,8 @@ cfg = BracketConfig(
 ├── styles.css
 ├── main.js
 ├── README.md
-├── 01_parametric_gear/
-├── 02_enclosure_box/
+├── 01_wireless_charger/
+├── 02_maglev_motor/
 ├── 03_technical_drawing/
 └── 04_cadquery_bracket/</code></pre>
         </div>
