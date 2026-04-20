@@ -29,11 +29,11 @@
       <section class="hero reveal">
         <div class="hero-copy">
           <p class="eyebrow">Mechanical Design Portfolio</p>
-          <h1>Parametric CAD work built for fabrication, iteration, and clean handoff.</h1>
+          <h1>Parametric CAD projects in OpenSCAD, CadQuery, and Python.</h1>
           <p class="lead">
-            This portfolio focuses on code-driven mechanical design: reproducible geometry,
-            manufacturing-aware decisions, and outputs that move cleanly from concept to
-            export, review, and downstream use.
+            Four engineering projects built with script-based CAD tools.
+            Each project includes source files, geometry analysis output,
+            and export-ready formats for fabrication or review.
           </p>
 
           <div class="hero-actions">
@@ -44,19 +44,19 @@
           <ul class="hero-metrics" aria-label="Portfolio metrics">
             <li>
               <strong>4</strong>
-              <span>featured builds</span>
+              <span>projects</span>
             </li>
             <li>
-              <strong>3</strong>
-              <span>generation workflows</span>
+              <strong>OpenSCAD · CadQuery</strong>
+              <span>tools</span>
             </li>
             <li>
               <strong>STEP · STL · DXF</strong>
-              <span>handoff formats</span>
+              <span>output formats</span>
             </li>
             <li>
-              <strong>ISO-aware</strong>
-              <span>drawing discipline</span>
+              <strong>Python</strong>
+              <span>scripted geometry</span>
             </li>
           </ul>
         </div>
@@ -76,24 +76,24 @@
 
           <div class="panel-cards">
             <article class="mini-card">
-              <p class="mini-title">What stands out</p>
-              <p>Parametric gears, enclosure logic, structural brackets, and standards-based drawings.</p>
+              <p class="mini-title">Projects</p>
+              <p>Wireless resonant charger, magnetic levitation motor, drone frame drawing, rocket nozzle.</p>
             </article>
             <article class="mini-card">
-              <p class="mini-title">Engineering signal</p>
-              <p>Backlash, cutout planning, handoff drawings, slot/round fixing, and load-screening output.</p>
+              <p class="mini-title">Analysis output</p>
+              <p>Inductance estimate, channel fit check, area ratio, motor coil layout, DXF with dimensions.</p>
             </article>
           </div>
 
           <div class="code-window" aria-label="Representative snippet">
-            <pre><code>module_size = 2
-num_teeth   = 24
-backlash    = 0.1
+            <pre><code>render_mode   = "assembled"
+coil_turns    = 7
+channel_count = 24
 
-cfg = BracketConfig(
-    flange_w=100,
-    thickness=6,
-    base_hole_type="slot",
+cfg = NozzleConfig(
+    throat_d=30,
+    channel_depth=4.0,
+    div_length=95,
 )</code></pre>
           </div>
         </aside>
@@ -288,7 +288,7 @@ cfg = BracketConfig(
       <section class="section-heading reveal" id="process">
         <div>
           <p class="eyebrow">Process</p>
-          <h2>A workflow that reads well in review and holds up in production handoff.</h2>
+          <h2>Each project follows the same four-step design process.</h2>
         </div>
       </section>
 
@@ -318,27 +318,27 @@ cfg = BracketConfig(
       <section class="section-heading reveal" id="capabilities">
         <div>
           <p class="eyebrow">Capabilities</p>
-          <h2>The portfolio is stronger when it signals judgment, not only tool familiarity.</h2>
+          <h2>Tools and techniques used across these projects.</h2>
         </div>
       </section>
 
       <section class="capability-grid">
         <article class="capability-card reveal">
-          <p class="card-kicker">Technical depth</p>
+          <p class="card-kicker">CAD & scripting</p>
           <ul class="capability-list">
-            <li>Parametric modeling with OpenSCAD and CadQuery</li>
-            <li>Mechanical features such as backlash, keyways, counterbores, and snap fits</li>
-            <li>Fabrication-aware decisions for printing, machining, and technical drawing output</li>
-            <li>Reusable configuration systems instead of single-purpose geometry</li>
+            <li>OpenSCAD — parametric 3D geometry with render modes and echo analysis</li>
+            <li>CadQuery (Python) — code-driven 3D parts with boolean operations and export</li>
+            <li>ezdxf (Python) — programmatic 2D technical drawing generation</li>
+            <li>Parametric config objects — change one value, regenerate the full geometry</li>
           </ul>
         </article>
         <article class="capability-card reveal">
-          <p class="card-kicker">Professional signal</p>
+          <p class="card-kicker">Engineering coverage</p>
           <ul class="capability-list">
-            <li>Clear repository structure and readable project boundaries</li>
-            <li>Outputs that match actual downstream workflows: STEP, STL, DXF</li>
-            <li>Standards language where it adds credibility rather than noise</li>
-            <li>Presentation layered as landing page plus repository brief plus project notes</li>
+            <li>Magnetic resonance coil geometry with Wheeler inductance estimate</li>
+            <li>Halbach array rotor, axial-flux stator layout, maglev bearing geometry</li>
+            <li>DXF manufacturing drawing with orthographic views, dimensions, title block</li>
+            <li>Convergent-divergent nozzle with cooling channel fit analysis and area ratio</li>
           </ul>
         </article>
       </section>
@@ -346,10 +346,10 @@ cfg = BracketConfig(
       <section class="repository reveal" id="repository">
         <div class="repository-copy">
           <p class="eyebrow">Repository</p>
-          <h2>Structured like a portfolio, not a dump of files.</h2>
+          <h2>Repository structure</h2>
           <p>
-            The root of the repository now gives three entry points: a landing page for fast
-            first impressions, a stronger repository brief, and project-level notes for deeper review.
+            Each project folder contains the source file, a README with engineering notes,
+            and pre-generated outputs (STEP, STL, or DXF) ready to open without running any tools.
           </p>
         </div>
         <div class="repository-panel">
@@ -367,7 +367,7 @@ cfg = BracketConfig(
     </main>
 
     <footer class="site-footer">
-      <p>Designed as a compact engineering portfolio surface for local preview, GitHub presentation, and future expansion.</p>
+      <p>Mechanical design portfolio — OpenSCAD · CadQuery · Python · DXF</p>
       <p>&copy; <span id="year"></span> VB CAD Portfolio</p>
     </footer>
   </div>
