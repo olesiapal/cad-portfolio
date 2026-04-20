@@ -205,80 +205,82 @@ cfg = BracketConfig(
         <article class="project-card reveal" data-category="drawing">
           <div class="project-topline">
             <span>03 / DXF</span>
-            <span>Documentation</span>
+            <span>Manufacturing Drawing</span>
           </div>
           <div class="project-visual" aria-hidden="true">
-            <img src="assets/previews/bracket-handoff-cover.png" alt="Bracket Manufacturing Handoff preview">
+            <img src="assets/previews/drone-frame-drawing-cover.png" alt="Drone Frame Manufacturing Drawing preview">
           </div>
           <div class="project-body">
-            <h3>Bracket Manufacturing Handoff Drawing</h3>
+            <h3>Drone Frame Manufacturing Handoff Drawing</h3>
             <p>
-              A bracket-linked DXF sheet that acts as the manufacturing handoff layer for
-              the CadQuery structural bracket family.
+              A complete A3 manufacturing drawing for an X-config quadcopter carbon frame,
+              generated programmatically from Python. Three views, dimensioned detail callout,
+              and a structured title block.
             </p>
             <dl class="fact-list">
               <div>
                 <dt>Constraint</dt>
-                <dd>Carry the bracket project through to a reviewable fabrication deliverable.</dd>
+                <dd>Produce a file that goes directly to a CNC/waterjet operator — no verbal handoff.</dd>
               </div>
               <div>
                 <dt>Signal</dt>
-                <dd>Orthographic views, hole callouts, title-block data, linked handoff intent.</dd>
+                <dd>Top view, side profile, 2:1 motor-mount detail, 6-layer DXF, tolerances, general notes.</dd>
               </div>
               <div>
                 <dt>Outputs</dt>
-                <dd>DXF R2000 drawing compatible with standard CAD viewers.</dd>
+                <dd>DXF R2010 generated from Python source — regenerates for any frame variant.</dd>
               </div>
             </dl>
           </div>
           <div class="tag-row" aria-label="Tags">
             <span>DXF</span>
-            <span>Orthographic views</span>
-            <span>Title blocks</span>
+            <span>Carbon frame</span>
+            <span>Detail callout</span>
           </div>
           <div class="card-actions">
-            <a href="03_technical_drawing/README.md">Case notes</a>
-            <a href="03_technical_drawing/mounting_bracket.dxf">Drawing file</a>
+            <a href="03_drone_frame_drawing/README.md">Case notes</a>
+            <a href="03_drone_frame_drawing/drone_frame.dxf">Drawing file</a>
           </div>
         </article>
 
         <article class="project-card reveal" data-category="cadquery">
           <div class="project-topline">
             <span>04 / CadQuery</span>
-            <span>Structural Part</span>
+            <span>Propulsion</span>
           </div>
           <div class="project-visual" aria-hidden="true">
-            <img src="assets/previews/structural-bracket-cover.png" alt="Structural Bracket Family preview">
+            <img src="assets/previews/laval-nozzle-cover.png" alt="De Laval Nozzle preview">
           </div>
           <div class="project-body">
-            <h3>Structural Bracket Family</h3>
+            <h3>De Laval Nozzle — Regenerative Cooling</h3>
             <p>
-              A CadQuery bracket family with real bend geometry, round/slot mounting
-              options, load-screening output, and multi-format export.
+              A parametric convergent-divergent rocket nozzle with 24 axial cooling channels,
+              outer jacket, coolant manifolds, and bolted flanges. Analysis output includes
+              area ratio, channel pitch, land width, and wall-margin warnings.
             </p>
             <dl class="fact-list">
               <div>
                 <dt>Constraint</dt>
-                <dd>Generate a reusable structural part family instead of a single bracket model.</dd>
+                <dd>Model a nozzle that signals thermal management decisions — not just the outer bell shape.</dd>
               </div>
               <div>
                 <dt>Signal</dt>
-                <dd>Inner bend radius, slot/round holes, cutout radiusing, lightweight load estimate.</dd>
+                <dd>Axial cooling channels, sealed jacket, counter-flow manifolds, wall margin check, area ratio output.</dd>
               </div>
               <div>
                 <dt>Outputs</dt>
-                <dd>STEP, STL, and DXF generated from the same source of truth.</dd>
+                <dd>STEP + STL (full and cross-section cut) generated from Python source.</dd>
               </div>
             </dl>
           </div>
           <div class="tag-row" aria-label="Tags">
-            <span>Slot holes</span>
+            <span>Regenerative cooling</span>
             <span>CadQuery</span>
-            <span>Load check</span>
+            <span>Area ratio</span>
           </div>
           <div class="card-actions">
-            <a href="04_cadquery_bracket/README.md">Case notes</a>
-            <a href="04_cadquery_bracket/bracket.py">Source</a>
+            <a href="04_laval_nozzle/README.md">Case notes</a>
+            <a href="04_laval_nozzle/nozzle.py">Source</a>
           </div>
         </article>
       </section>
@@ -358,8 +360,8 @@ cfg = BracketConfig(
 ├── README.md
 ├── 01_wireless_charger/
 ├── 02_maglev_motor/
-├── 03_technical_drawing/
-└── 04_cadquery_bracket/</code></pre>
+├── 03_drone_frame_drawing/
+└── 04_laval_nozzle/</code></pre>
         </div>
       </section>
     </main>
